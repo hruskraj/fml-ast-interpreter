@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ "$1" = "run" ]
+then
+    $PARSER parse $2 -o program.json --format=json
+    ./interpreter program.json
+    rm -rf program.json
+else
+    echo "Unknown command: $1. Supported commands: run"
+fi

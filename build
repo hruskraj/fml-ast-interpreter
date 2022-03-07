@@ -1,0 +1,5 @@
+#!/bin/bash
+
+which g++ 1>/dev/null 2>/dev/null || sudo apt install g++
+
+g++ main.cpp -o interpreter
